@@ -3,1118 +3,428 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chandantechnology</title>
-    <link rel="icon" href="logo/CHANDAN TECHNOLOGY.png" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
+    <title>Contact Us & Request a Quote | JDM AeroCoats</title>
+    <meta
+      name="description"
+      content="Contact JDM AeroCoats for specialized surface treatment solutions. Phone: +91 9901577414. Located in Kachohalli, Bangalore - 560091, Karnataka, India."
     />
+    <link rel="icon" type="image/png" href="logo/jdm-aerocoats-logo.png" />
+    <link rel="apple-touch-icon" href="logo/jdm-aerocoats-logo.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="home.css" />
   </head>
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "poppins", sans-serif;
-    }
-
-    body {
-      background: #fff;
-      color: #111;
-      line-height: 1.6;
-    }
-
-    .service-hero-content h2 span.letter,
-    .service-hero-content h1 span.letter {
-      opacity: 0;
-      transform: translateY(-30px);
-      animation: fadeInUp 0.6s ease-out forwards;
-      display: inline-block;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .service-hero {
-      background-image: url(img/10506876.jpg);
-      background-size: cover;
-
-      object-fit: contain;
-      background-position: center;
-      padding: 100px 30px;
-      position: relative;
-      overflow: hidden;
-      color: #fff;
-      text-align: left;
-    }
-
-    .service-hero-content {
-      max-width: 700px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .service-hero-content h2 {
-      font-size: 36px;
-      font-weight: 300;
-      line-height: 1.4;
-    }
-
-    .service-hero-content h2 span {
-      font-weight: 700;
-      color: #ffdd00;
-    }
-
-    .bg-text {
-      font-size: 100px;
-      font-weight: 700;
-      margin: 0;
-      line-height: 1;
-      bottom: 30px;
-      left: 30px;
-      color: #0f67f4;
-    }
-    @media (max-width: 446px) {
-      
-      .service-hero-content h2 {
-        font-size: 28px;
-      }
-      .bg-text {
-        font-size: 60px;
-      }
-    }
-
-    /* Hero Section */
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: auto;
-      font-family: "poppins", sans-serif;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-
-    .hero .highlight {
-      color: #1e73e8;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 25px;
-    }
-
-    /* Buttons */
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      text-decoration: none;
-      padding: 12px 28px;
-      border-radius: 25px;
-      font-size: 1rem;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .btn.primary {
-      background: #1e73e8;
-      color: #fff;
-    }
-
-    .btn.primary:hover {
-      background: #125bb5;
-    }
-
-    .btn.secondary {
-      background: #f4f4f4;
-      color: #333;
-      border: 1px solid #ddd;
-    }
-
-    .btn.secondary:hover {
-      background: #e6e6e6;
-    }
-
-    /* Rating */
-    .rating {
-      margin-top: 10px;
-      font-size: 0.95rem;
-      color: #333;
-    }
-
-    .rating p {
-      font-size: 0.85rem;
-      color: #555;
-    }
-
-    .rating a {
-      color: #1e73e8;
-      text-decoration: none;
-    }
-
-    /* Stats Section */
-    .hero-stats {
-      margin-top: 60px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      font-family: "poppins", sans-serif;
-      justify-content: center;
-      text-align: center;
-      align-items: center;
-    }
-
-    .stat {
-      background: #f9f9f9;
-      border-radius: 15px;
-      padding: 25px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    .stat img {
-      width: 100%;
-      border-radius: 12px;
-    }
-
-    .stat h2 {
-      font-size: 2rem;
-      color: #111;
-      margin-bottom: 10px;
-    }
-
-    .stat p {
-      font-size: 0.95rem;
-      color: #000000;
-    }
-
-    /* Color Variations */
-    .stat.blue {
-      background: #000000;
-      color: #ffffff;
-      font-size: 2rem;
-    }
-    .stat.blue p {
-      color: #d4d4d4;
-      font-size: 1rem;
-      font-weight: 600;
-    }
-    .stat.blue h2 {
-      color: #1f61f0;
-      font-size: 2rem;
-    }
-
-    .stat.green {
-      background: #f0fdf4;
-      color: #111;
-      border: 1px solid #cce8d8;
-    }
-
-    .stat.lightgreen {
-      background: #d9f99d;
-      color: #111;
-    }
-
-    /* machines */
-
-    .machine-sec {
-      padding: 60px 20px;
-      background: #fff;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .machine-sec h2 {
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-      font-weight: 700;
-      color: #111;
-    }
-
-    .machine-sec h2 span {
-      color: #e60012; /* Red Plus */
-      margin-left: 10px;
-    }
-
-    /* Grid Layout */
-    .machine-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    /* Machine Cards */
-    .machine-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .machine-card img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 15px;
-      border-radius: 8px;
-    }
-
-    .machine-card h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #222;
-      margin-bottom: 15px;
-    }
-
-    /* Wide cards (side by side image + text) */
-    .machine-card.wide {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      grid-column: span 2;
-    }
-
-    .machine-card.wide .machine-info {
-      flex: 1;
-    }
-
-    .machine-card.wide .machine-img {
-      flex: 1;
-    }
-
-    .machine-card.wide img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .machine-card ul {
-      list-style: disc;
-      margin: 0 0 15px 20px;
-      text-align: left;
-      color: #444;
-      font-size: 0.95rem;
-    }
-
-    /* Explore Button */
-    .explore-btn {
-      display: inline-block;
-      background: #007bff;
-      color: #fff;
-      padding: 8px 18px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    .explore-btn:hover {
-      background: #7e7e7e;
-    }
-
-    .work-section {
-      margin-top: 2rem;
-      padding-bottom: 60px;
-    }
-    .work-header {
-      text-align: center;
-      padding: 60px 20px 30px;
-    }
-
-    .work-header h2 {
-      font-size: 2.5rem;
-      font-weight: 600;
-    }
-
-    .work-header h2 span {
-      color: #3fa9f5;
-    }
-
-    .work-header p {
-      font-size: 1rem;
-      color: #525252;
-      margin-top: 10px;
-    }
-
-    /* Grid */
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: 250px;
-      gap: 20px;
-      padding: 20px 60px 60px;
-    }
-
-    /* Card */
-    .work-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 16px;
-    }
-
-    .work-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.4s;
-    }
-
-    .work-card:hover img {
-      transform: scale(1.1);
-      filter: brightness(0.7);
-    }
-
-    /* Info */
-    .work-info {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      z-index: 2;
-    }
-
-    .work-info h3 {
-      font-size: 1.1rem;
-      margin: 5px 0 0;
-      color: #ffffff;
-    }
-    .tag {
-      color: #fff;
-    }
-
-    .tag {
-      font-size: 0.8rem;
-      background: rgba(0, 149, 255, 0.8);
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-weight: 600;
-    }
-
-    /* CTA button */
-    .cta-btn {
-      background: #0095ff;
-      border: none;
-      padding: 12px 20px;
-      color: #fff;
-      font-size: 0.9rem;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .cta-btn:hover {
-      background: #2a7fb6;
-    }
-
-    /* Special card sizing */
-    .large {
-      grid-row: span 2;
-    }
-
-    .wide {
-      grid-column: span 2;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .work-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .wide {
-        grid-column: span 1;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .work-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
-      }
-      .large {
-        grid-row: span 1;
-      }
-    }
-
-    /* Enquiry Section */
-    .enquiry-section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-      font-family: "poppins", sans-serif;
-    }
-
-    .enquiry-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .enquiry-left {
-      position: relative;
-    }
-
-    .contact-image {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .contact-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      min-height: 400px;
-      object-fit: cover;
-    }
-
-    .contact-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .contact-overlay h3 {
-      color: #fff;
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-    }
-
-    .contact-icons {
-      display: flex;
-      gap: 20px;
-      font-size: 2rem;
-      color: #fff;
-    }
-
-    .contact-icons i {
-      background: rgba(255, 255, 255, 0.2);
-      padding: 15px;
-      border-radius: 8px;
-      transition: all 0.3s;
-    }
-
-    .contact-icons i:hover {
-      background: rgba(255, 217, 0, 0.3);
-      transform: scale(1.1);
-    }
-
-    .enquiry-right {
-      padding: 40px;
-      background: #f9f9f9;
-      border-radius: 12px;
-    }
-
-    .enquiry-right h2 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 5px;
-    }
-
-    .enquiry-subtitle {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 30px;
-      font-weight: 600;
-    }
-
-    .enquiry-form {
-      margin-bottom: 20px;
-    }
-
-    .form-group {
-      margin-bottom: 18px;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      font-family: "poppins", sans-serif;
-      font-size: 0.95rem;
-      transition: all 0.3s;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: #007bff;
-      box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      font-family: "poppins", sans-serif;
-    }
-
-    .submit-btn {
-      width: 100%;
-      padding: 12px 20px;
-      background: #ff8c00;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s;
-      font-family: "poppins", sans-serif;
-    }
-
-    .submit-btn:hover {
-      background: #e67e00;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
-    }
-
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-    }
-
-    .info-link {
-      color: #333;
-      text-decoration: none;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      transition: all 0.3s;
-    }
-
-    .info-link i {
-      color: #ff8c00;
-    }
-
-    .info-link:hover {
-      color: #ff8c00;
-      transform: translateX(5px);
-    }
-
-    /* Map Section */
-    .map-section {
-      padding: 60px 20px;
-      background: #f5f5f5;
-    }
-
-    .map-container {
-      max-width: 1200px;
-      margin: 0 auto 40px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .map-container iframe {
-      border: none;
-    }
-
-    .address-info {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .address-box {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    .address-box h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 15px;
-    }
-
-    .address-box p {
-      color: #555;
-      font-size: 1rem;
-      line-height: 1.8;
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-
-    .address-box i {
-      color: #ff8c00;
-      font-size: 1.2rem;
-      margin-top: 2px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .enquiry-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .enquiry-right {
-        padding: 30px;
-      }
-
-      .enquiry-right h2 {
-        font-size: 1.5rem;
-      }
-
-      .contact-image img {
-        min-height: 300px;
-      }
-
-      .map-container iframe {
-        height: 350px !important;
-      }
-
-      .address-box {
-        padding: 20px;
-      }
-    }
-  </style>
   <body>
-    <header class="navbar">
-      <div class="logo">
-        <img src="logo/CHANDAN_TECHNOLOGY-removebg-preview.png" alt="" />
+    <!-- Top Announcement Bar -->
+    <div class="top-notice-bar">
+      <div class="container top-notice-container">
+        <div class="top-notice-left">
+          <div class="top-notice-item">
+            <i class="fa-solid fa-award"></i>
+            <span>ISO 9001:2015 Certified Company</span>
+          </div>
+          <div class="top-notice-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Kachohalli, Bangalore - 560091, Karnataka, India</span>
+          </div>
+          <div class="top-notice-item">
+            <i class="fa-solid fa-id-card"></i>
+            <span>GSTIN: 29AAWFJ8298F1ZB</span>
+          </div>
+        </div>
+        <div class="top-notice-right">
+          <a href="tel:+919901577414" class="top-notice-link">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 9901577414</span>
+          </a>
+          <a
+            href="https://wa.me/919901577414?text=Hello%20JDM%20AeroCoats%2C%20I%20would%20like%20to%20enquire%20about%20your%20surface%20treatment%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="top-notice-link"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp Enquiry</span>
+          </a>
+        </div>
       </div>
-      <button class="menu-toggle" aria-label="Toggle menu">
-        <i class="fas fa-bars"></i>
-      </button>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="ourmachine.html">Our Machines</a>
-        <a href="contact.html">Contact</a>
-        <a
-          href="https://wa.me/8123638613?text=Hi%20Chandhan%20Technology!%20I%20am%20interested%20in%20your%20VMC%20solutions. Can%20you%20provide%20more%20details?"
-          class="btn-yellow"
-          >Enquiry ➜</a
-        >
-      </nav>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="mainNavbar">
+      <div class="container navbar-container">
+        <a href="index.html#home" class="logo-link" title="JDM AeroCoats Home">
+          <img
+            src="logo/jdm-aerocoats-logo.png"
+            alt="JDM AeroCoats Logo - Precision Surface Treatment Solutions"
+            width="217"
+            height="128"
+          />
+        </a>
+
+        <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#about">About Us</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#capabilities">Capabilities</a>
+          <a href="index.html#industries">Industries</a>
+          <a href="index.html#quality">Quality</a>
+          <a href="index.html#why-us">Why Choose Us</a>
+          <a href="contact.html" class="active">Contact</a>
+          <a href="contact.html" class="btn-primary mobile-quote-btn" style="display: none;">
+            Request a Quote
+          </a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#quoteForm" class="btn-primary">
+            <span>Request a Quote</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
     </header>
 
-    <section class="service-hero" id="services">
-      <div class="service-hero-content">
-        <h2>For <br /><span></span></h2>
-        <h1 class="bg-text">Contact</h1>
-      </div>
-    </section>
+    <main>
+      <!-- Subpage Header Banner -->
+      <section style="background: var(--blue-gradient); color: #fff; padding: 60px 0;">
+        <div class="container" style="text-align: center;">
+          <span class="section-badge" style="background: rgba(255,255,255,0.15); color: #93C5FD;">GET IN TOUCH</span>
+          <h1 style="font-family: var(--font-heading); font-size: 2.75rem; font-weight: 800; margin-bottom: 12px;">Contact JDM AeroCoats</h1>
+          <p style="font-size: 1.125rem; color: #E2E8F0; max-width: 680px; margin: 0 auto;">
+            Connect with Chethan Rao M, Proprietor, to discuss technical specifications, chemical treatment capabilities, and drawing requirements.
+          </p>
+        </div>
+      </section>
 
-    <!-- Enquiry Section -->
-    <section class="enquiry-section">
-      <div class="enquiry-container">
-        <!-- Left Side - Contact Image & Info -->
-        <div class="enquiry-left">
-          <div class="contact-image">
-            <img src="logo/CHANDAN TECHNOLOGY.png" alt="Contact Us" />
-            <div class="contact-overlay">
-              <h3>CONTACT US</h3>
-              <div class="contact-icons">
-                <i class="fas fa-envelope"></i>
-                <i class="fas fa-cog"></i>
-                <i class="fas fa-briefcase"></i>
-                <i class="fas fa-eye"></i>
-                <i class="fas fa-wifi"></i>
+      <!-- Contact Section -->
+      <section class="section-padding contact-section" style="padding-top: 60px;">
+        <div class="container">
+          <div class="contact-grid">
+            <!-- Contact Info Card -->
+            <div class="contact-info-card">
+              <h3>Facility Information</h3>
+              <p class="lead">
+                Reach out directly to our engineering and management team to review part drawings and production schedules.
+              </p>
+
+              <div class="contact-details-list">
+                <div class="contact-detail-item">
+                  <div class="contact-detail-icon">
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <div class="contact-detail-content">
+                    <h5>Key Contact</h5>
+                    <p class="contact-proprietor">Chethan Rao M</p>
+                    <span class="contact-proprietor-role">Proprietor — JDM AeroCoats</span>
+                  </div>
+                </div>
+
+                <div class="contact-detail-item">
+                  <div class="contact-detail-icon">
+                    <i class="fa-solid fa-phone-volume"></i>
+                  </div>
+                  <div class="contact-detail-content">
+                    <h5>Phone Number</h5>
+                    <p><a href="tel:+919901577414">+91 9901577414</a></p>
+                  </div>
+                </div>
+
+                <div class="contact-detail-item">
+                  <div class="contact-detail-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="contact-detail-content">
+                    <h5>Facility Address</h5>
+                    <p>
+                      #35, Assessment No: 9/1, 9/2,<br />
+                      Kachohalli, Dasanapura Hobli,<br />
+                      Bangalore - 560091, Karnataka, India.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-detail-item">
+                  <div class="contact-detail-icon">
+                    <i class="fa-solid fa-file-invoice"></i>
+                  </div>
+                  <div class="contact-detail-content" style="width: 100%;">
+                    <h5>Tax Identification</h5>
+                    <div class="contact-gstin-badge">
+                      <span>GSTIN</span>
+                      <code>29AAWFJ8298F1ZB</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Instant WhatsApp Button -->
+              <a
+                href="https://wa.me/919901577414?text=Hello%20JDM%20AeroCoats%2C%20I%20would%20like%20to%20enquire%20about%20your%20surface%20treatment%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="whatsapp-action-btn"
+              >
+                <i class="fa-brands fa-whatsapp fa-lg"></i>
+                <span>Enquire via WhatsApp</span>
+              </a>
+            </div>
+
+            <!-- Contact & Quote Form Card -->
+            <div class="contact-form-card">
+              <h3>Request a Quotation</h3>
+              <p>Submit your component details and specification requirements for technical review.</p>
+
+              <div id="formFeedback" class="form-feedback" role="alert"></div>
+
+              <form id="quoteForm" class="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="fullName">Full Name <span class="required">*</span></label>
+                    <input
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      class="form-control"
+                      placeholder="e.g. Chethan Rao"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="companyName">Company / Organization</label>
+                    <input
+                      type="text"
+                      id="companyName"
+                      name="companyName"
+                      class="form-control"
+                      placeholder="e.g. AeroTech Engineering"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="form-control"
+                      placeholder="+91 9901577414"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="contact@company.com"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="serviceRequired">Service Required <span class="required">*</span></label>
+                  <select id="serviceRequired" name="serviceRequired" class="form-control" required>
+                    <option value="" disabled selected>Select a Surface Treatment Process</option>
+                    <option value="Anodizing">Anodizing (Type II / Type III Hard Anodizing)</option>
+                    <option value="Chromate Conversion Coating">Chromate Conversion Coating (Alodine / MIL-DTL-5541)</option>
+                    <option value="Stainless Steel Passivation">Stainless Steel Passivation (AMS 2700)</option>
+                    <option value="Zinc Plating">Zinc Plating (Threaded Parts / Steel)</option>
+                    <option value="Nickel Plating">Nickel Plating (Wear & High Temp)</option>
+                    <option value="Custom Solutions">Custom Surface Treatment Solution</option>
+                    <option value="Multiple Processes">Multiple Processes / Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Drawing & Specification Details <span class="required">*</span></label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-control"
+                    placeholder="Provide component material, drawing specifications, batch quantity, coating thickness requirements, and timeline..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width: 100%; padding: 14px 24px; font-size: 1rem;">
+                  <span>Submit Quotation Request</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img
+              src="logo/jdm-aerocoats-logo.png"
+              alt="JDM AeroCoats Logo"
+              class="logo-img"
+              width="217"
+              height="128"
+            />
+            <p class="footer-brand-desc">
+              Specialized surface treatment facility delivering precision finishing solutions for aerospace, defence, automotive, and engineering applications.
+            </p>
+            <div class="footer-cert-badge">
+              <i class="fa-solid fa-award"></i>
+              <span>ISO 9001:2015 Certified Company</span>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h4>Quick Navigation</h4>
+            <div class="footer-links-list">
+              <a href="index.html#home"><i class="fa-solid fa-chevron-right fa-xs"></i> Home</a>
+              <a href="index.html#about"><i class="fa-solid fa-chevron-right fa-xs"></i> About JDM AeroCoats</a>
+              <a href="index.html#services"><i class="fa-solid fa-chevron-right fa-xs"></i> Treatment Services</a>
+              <a href="index.html#capabilities"><i class="fa-solid fa-chevron-right fa-xs"></i> Technical Capabilities</a>
+              <a href="index.html#industries"><i class="fa-solid fa-chevron-right fa-xs"></i> Industries Served</a>
+              <a href="index.html#quality"><i class="fa-solid fa-chevron-right fa-xs"></i> Quality & Compliance</a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h4>Surface Treatments</h4>
+            <div class="footer-links-list">
+              <a href="index.html#services"><i class="fa-solid fa-chevron-right fa-xs"></i> Type II & III Anodizing</a>
+              <a href="index.html#services"><i class="fa-solid fa-chevron-right fa-xs"></i> Chromate Conversion (Alodine)</a>
+              <a href="index.html#services"><i class="fa-solid fa-chevron-right fa-xs"></i> Stainless Steel Passivation</a>
+              <a href="index.html#services"><i class="fa-solid fa-chevron-right fa-xs"></i> Bright Zinc Plating</a>
+              <a href="index.html#services"><i class="fa-solid fa-chevron-right fa-xs"></i> Electroless / Nickel Plating</a>
+              <a href="index.html#services"><i class="fa-solid fa-chevron-right fa-xs"></i> Custom Engineered Finishes</a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h4>Contact Details</h4>
+            <div class="footer-contact-list">
+              <div class="footer-contact-item">
+                <i class="fa-solid fa-user-tie"></i>
+                <span><strong>Chethan Rao M</strong>, Proprietor</span>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span><a href="tel:+919901577414" style="color: inherit;">+91 9901577414</a></span>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>#35, Assessment No: 9/1, 9/2, Kachohalli, Dasanapura Hobli, Bangalore - 560091, Karnataka, India</span>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fa-solid fa-id-card"></i>
+                <span>GSTIN: 29AAWFJ8298F1ZB</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right Side - Form -->
-        <div class="enquiry-right">
-          <h2>Contact Us</h2>
-          <p class="enquiry-subtitle">Call us or book an Appointment</p>
-
-          <form class="enquiry-form" id="enquiryForm">
-            <div class="form-group">
-              <input type="text" placeholder="Name" name="name" required />
-            </div>
-
-            <div class="form-group">
-              <input type="email" placeholder="Email" name="email" required />
-            </div>
-
-            <div class="form-group">
-              <input type="tel" placeholder="Phone" name="phone" required />
-            </div>
-
-            <div class="form-group">
-              <textarea
-                placeholder="How can we help?"
-                name="message"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn">Submit</button>
-          </form>
-
-          <div class="contact-info">
-            <a href="mailto:info@chandantechnology.com" class="info-link">
-              <i class="fas fa-envelope"></i>
-              info@chandantechnology.com
-            </a>
-            <a href="tel:+919353990066" class="info-link">
-              <i class="fas fa-phone"></i>
-              +91 9353990066
-            </a>
+        <div class="footer-bottom">
+          <div class="footer-bottom-container">
+            <p>© 2026 JDM AeroCoats. All rights reserved. Quality • Precision • Reliability.</p>
+            <p>ISO 9001:2015 Certified Surface Treatment Facility</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="map-section">
-      <div class="map-container">
-        <iframe
-          title="Chandhan Technology Location Map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.2267!2d77.5136!3d13.0179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x898d2aa36c49da23%3A0x4e7a0f3525a3c14c!2sChandan%20Technology!5e0!3m2!1sen!2sin!4v1701763200000"
-          width="100%"
-          height="500"
-          allowfullscreen=""
-          class="contact-map"
-        ></iframe>
-      </div>
-
-      <div class="address-info">
-        <div class="address-box">
-          <h3>Our Location</h3>
-          <p>
-            <i class="fas fa-map-marker-alt"></i>
-            Chandhan Technology, No 26, 8th Cross, Chamundeshwari Nagar,
-            Rajgopal Nagar Main Road, Peenya 2nd Stage, Bengaluru – 560058
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-container">
-        <!-- Left Column -->
-        <div class="footer-brand">
-          <img
-            src="logo/CHANDAN_TECHNOLOGY-removebg-preview.png"
-            alt="Chandhan Technology Logo"
-            class="logo"
-          />
-     
-        </div>
-
-        <!-- Quick Menu -->
-        <div class="footer-links">
-          <h4>Quick Menu</h4>
-          <ul>
-            <li><a href="services.html">VMC Milling & Drilling</a></li>
-            <li><a href="precision.html">VMC Drilling</a></li>
-            <li><a href="index.html">About Us</a></li>
-            <li><a href="contact.html">Get a Quote</a></li>
-          </ul>
-        </div>
-
-        <!-- Support -->
-        <div class="footer-links">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="contact.html">FAQs</a></li>
-            <li><a href="contact.html">Quality Policy</a></li>
-            <li><a href="contact.html">Certifications</a></li>
-          </ul>
-        </div>
-
-        <!-- Social -->
-        <div class="footer-social">
-          <h4>Follow Us</h4>
-          <div class="social-icons">
-            <a href="#" title="Facebook" target="_blank" rel="noopener">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" title="Instagram" target="_blank" rel="noopener">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a
-              href="https://wa.me/9353990066?text=Hello%20Chandhan%20Technology%2C%20I%20am%20interested%20in%20your%20VMC%20solutions."
-              target="_blank"
-              rel="noopener"
-              title="WhatsApp"
-            >
-              <i class="fab fa-whatsapp"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Contact Details -->
-        <div class="footer-contact">
-          <p>
-            <a
-              href="https://www.google.com/maps?q=No+26,+8th+Cross,+Chamundeshwari+Nagar,+Rajgopal+Nagar+Main+Road,+Peenya+2nd+Stage,+Bengaluru+560058"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fas fa-map-marker-alt"></i>
-              Chandhan Technology, No 26, 8th Cross, Chamundeshwari Nagar,
-              Rajgopal Nagar Main Road, Peenya 2nd Stage, Bengaluru – 560058
-            </a>
-          </p>
-
-          <p>
-            <a href="tel:+9353990066">
-              <i class="fas fa-phone-alt"></i> +91 93539 90066
-            </a>
-          </p>
-
-          <p>
-            <a href="tel:+8197636028">
-              <i class="fas fa-phone-alt"></i> +91 81976 36028
-            </a>
-          </p>
-
-          <p>
-            <a
-              href="mailto:info@chandantechnology.com"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fas fa-envelope"></i> info@chandantechnology.com
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© Copyright 2025. Chandhan Technology. All rights reserved.</p>
       </div>
     </footer>
 
+    <!-- Interactive Scripts -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Service Hero h2 animation
-        const serviceHeroH2 = document.querySelector(
-          ".service-hero-content h2"
-        );
-        if (serviceHeroH2) {
-          // Split text into spans if not already done
-          if (!serviceHeroH2.querySelector("span.letter")) {
-            const html = serviceHeroH2.innerHTML;
-            // Split by <br> and animate each line
-            serviceHeroH2.innerHTML = "";
-            html.split("<br>").forEach((line, lineIdx) => {
-              if (lineIdx > 0)
-                serviceHeroH2.appendChild(document.createElement("br"));
-              line
-                .replace(/<[^>]+>/g, "")
-                .split("")
-                .forEach((char, i) => {
-                  const span = document.createElement("span");
-                  span.className = "letter";
-                  span.textContent = char === " " ? "\u00A0" : char;
-                  serviceHeroH2.appendChild(span);
-                });
-            });
-          }
-          serviceHeroH2.querySelectorAll("span.letter").forEach((span) => {
-            span.style.opacity = 0;
-            span.style.transform = "translateY(-30px)";
-            span.style.animation = "none";
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        if (menuToggle && navLinks) {
+          menuToggle.addEventListener("click", function () {
+            const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", !isExpanded);
+            menuToggle.classList.toggle("open");
+            navLinks.classList.toggle("active");
           });
-          const observerH2 = new IntersectionObserver(
-            ([entry]) => {
-              if (entry.isIntersecting) {
-                serviceHeroH2
-                  .querySelectorAll("span.letter")
-                  .forEach((span, i) => {
-                    span.style.animation = "fadeInUp 0.6s ease-out forwards";
-                    span.style.animationDelay = i * 0.06 + "s";
-                  });
-              }
-            },
-            { threshold: 0.5 }
-          );
-          observerH2.observe(serviceHeroH2);
-        }
 
-        // Service Hero h1 animation
-        const serviceHeroH1 = document.querySelector(
-          ".service-hero-content h1"
-        );
-        if (serviceHeroH1) {
-          if (!serviceHeroH1.querySelector("span.letter")) {
-            const text = serviceHeroH1.textContent;
-            serviceHeroH1.innerHTML = "";
-            text.split("").forEach((char) => {
-              const span = document.createElement("span");
-              span.className = "letter";
-              span.textContent = char === " " ? "\u00A0" : char;
-              serviceHeroH1.appendChild(span);
+          navLinks.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              navLinks.classList.remove("active");
+              menuToggle.classList.remove("open");
+              menuToggle.setAttribute("aria-expanded", "false");
             });
-          }
-          serviceHeroH1.querySelectorAll("span.letter").forEach((span) => {
-            span.style.opacity = 0;
-            span.style.transform = "translateY(-30px)";
-            span.style.animation = "none";
           });
-          const observerH1 = new IntersectionObserver(
-            ([entry]) => {
-              if (entry.isIntersecting) {
-                serviceHeroH1
-                  .querySelectorAll("span.letter")
-                  .forEach((span, i) => {
-                    span.style.animation = "fadeInUp 0.6s ease-out forwards";
-                    span.style.animationDelay = i * 0.06 + "s";
-                  });
-              }
-            },
-            { threshold: 0.5 }
-          );
-          observerH1.observe(serviceHeroH1);
-        }
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector(".nav-links");
-        menuToggle.addEventListener("click", function () {
-          navLinks.classList.toggle("active");
-        });
-      });
-    </script>
-
-    <script>
-      // ...existing code...
-
-      // Count animation for hero-stats numbers
-      document.addEventListener("DOMContentLoaded", function () {
-        function animateCount(el, target, duration = 1200) {
-          let start = 0;
-          let startTime = null;
-          target = parseInt(target, 10);
-          function step(ts) {
-            if (!startTime) startTime = ts;
-            const progress = Math.min((ts - startTime) / duration, 1);
-            el.textContent = Math.floor(progress * (target - start) + start);
-            if (progress < 1) {
-              requestAnimationFrame(step);
-            } else {
-              el.textContent = target;
-            }
-          }
-          requestAnimationFrame(step);
         }
 
-        // Animate all .stat h2 numbers when .hero-stats enters viewport
-        const statsSection = document.querySelector(".hero-stats");
-        if (statsSection) {
-          const observer = new IntersectionObserver(
-            function (entries) {
-              if (entries[0].isIntersecting) {
-                statsSection
-                  .querySelectorAll(".stat h2")
-                  .forEach(function (h2) {
-                    const target = h2.textContent.replace(/\D/g, "");
-                    if (target) animateCount(h2, target);
-                  });
-                observer.disconnect();
-              }
-            },
-            { threshold: 0.3 }
-          );
-          observer.observe(statsSection);
-        }
-      });
+        const quoteForm = document.getElementById("quoteForm");
+        const formFeedback = document.getElementById("formFeedback");
 
-      // ...existing code...
-    </script>
-
-    <script>
-      // Enquiry Form Submission
-      document.addEventListener("DOMContentLoaded", function () {
-        const enquiryForm = document.getElementById("enquiryForm");
-        if (enquiryForm) {
-          enquiryForm.addEventListener("submit", function (e) {
+        if (quoteForm) {
+          quoteForm.addEventListener("submit", function (e) {
             e.preventDefault();
 
-            // Get form values
-            const formData = new FormData(this);
-            const data = {
-              name: formData.get("name"),
-              email: formData.get("email"),
-              phone: formData.get("phone"),
-              message: formData.get("message"),
-            };
+            const fullName = document.getElementById("fullName").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const service = document.getElementById("serviceRequired").value;
+            const message = document.getElementById("message").value.trim();
 
-            // Create mailto link
-            const subject = `New Enquiry from ${data.name}`;
-            const body = `
-Name: ${data.name}
-Email: ${data.email}
-Phone: ${data.phone}
+            if (!fullName || !phone || !email || !service || !message) {
+              formFeedback.className = "form-feedback error";
+              formFeedback.textContent = "Please fill in all required fields before submitting.";
+              return;
+            }
 
-Message:
-${data.message}
-            `;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+              formFeedback.className = "form-feedback error";
+              formFeedback.textContent = "Please enter a valid email address.";
+              return;
+            }
 
-            // Send email using mailto (opens email client)
-            window.location.href = `mailto:info@chandantechnology.com?subject=${encodeURIComponent(
-              subject
-            )}&body=${encodeURIComponent(body)}`;
+            formFeedback.className = "form-feedback success";
+            formFeedback.innerHTML = "<strong>Thank you, " + fullName + "!</strong> Your enquiry for <em>" + service + "</em> has been submitted. Our engineering team at JDM AeroCoats (+91 9901577414) will review your specifications and contact you promptly.";
 
-            // Optional: Show success message
-            alert("Thank you for your enquiry! Opening email client...");
+            const company = document.getElementById("companyName").value.trim();
+            const whatsappText = encodeURIComponent(
+              "Enquiry from " + fullName + (company ? " (" + company + ")" : "") + "\nPhone: " + phone + "\nEmail: " + email + "\nService: " + service + "\nDetails: " + message
+            );
+            
+            const extraNote = document.createElement("p");
+            extraNote.style.marginTop = "10px";
+            extraNote.style.fontSize = "0.875rem";
+            extraNote.innerHTML = "<a href='https://wa.me/919901577414?text=" + whatsappText + "' target='_blank' style='color: #065F46; text-decoration: underline; font-weight: 700;'><i class='fa-brands fa-whatsapp'></i> Send copy via WhatsApp for urgent processing</a>";
+            formFeedback.appendChild(extraNote);
 
-            // Reset form
-            this.reset();
+            quoteForm.reset();
           });
         }
       });
